@@ -1,0 +1,43 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url("bg1.jpg");
+  background-size: cover;
+}
+
+.tempPagePad {
+  height: 33.33%;
+}
+
+.tempPageContent {
+  height: 33.33%;
+  color: #fff;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.innerrow1 {
+  height: 75%;
+}
+
+.innerrow2 {
+  height: 25%;
+}
+
+.c1 {
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.c2 {
+  font-weight: 500;
+  font-size: 1.2em;
+}

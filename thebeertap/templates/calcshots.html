@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>roadCNN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/main.css') }} " />
+
+    <style>
+        
+        *, html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        ::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        body {
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .mainpage {
+            height: 100% !important;
+            background-image: linear-gradient(170deg, #fff 70%, rgb(255, 211, 117) 70%, rgb(248, 166, 43) 100%);
+        }
+
+
+        .introduction-text {
+            height: 100%;
+            text-align: left;
+            font-weight: 900;
+            font-size: 6.5vh;
+            line-height: 0.95em;
+            mix-blend-mode: difference;
+            color: rgb(124, 124, 124);
+        }
+
+        .app-title {
+            font-weight: 900;
+            font-size: 2.5em;
+            color: #000;
+            text-align: left;
+            height: auto !important;
+        }
+
+        .app-navigation {
+            color: #000;
+            margin: 4% 0;
+            font-weight: 400;
+            font-size: 1em;
+            height: auto !important;
+        }
+
+        .app-description {
+            color: #000;
+            text-align: left;
+            font-weight: 100;
+            font-size: 1.05em;
+            
+        }
+
+        .row {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-elements a {
+            color: #000;
+            padding: 8px 20px;
+        }
+
+        .nav-elements a:hover {
+            color: rgb(255, 123, 0);
+            padding: 8px 20px;
+        }
+
+
+        #logo {
+            height: 50px;
+            width: auto;
+            padding-left: 80px;
+        }
+
+        .logo-navigation {
+            color: #000;
+            margin: 3% 0;
+            font-weight: 400;
+            font-size: 1em;
+            padding-left: 4vmin !important;
+            height: auto !important;
+        }
+
+        .vertical-title  {
+          font-weight: 900;
+          font-size: 6vmin;
+          mix-blend-mode: difference;
+          color: rgb(124, 124, 124);
+          transform: rotate(90deg);
+          height: 100% !important;
+          padding-top: 26vmin !important;
+        }
+
+        .form-elements {
+          height: auto !important;
+          font-size: 1.5vw;
+          font-weight: 900;
+          padding: 0px 0px !important;
+        }
+
+        .form-container {
+          margin: % 0;
+        }
+
+        table {
+            height: auto !important;
+            border-collapse: separate;
+        }
+
+        #result-description {
+            font-size: 2.8vmin;
+            font-weight: 400;
+        }
+
+        #result-number {
+            font-size: 12vmin;
+            font-weight: 900;
+        }
+        
+        label {
+            font-weight: 500;
+        }
+
+        .btn {
+            background-color: rgb(248, 166, 43) !important;
+            font-size: 1.3vw;
+            font-weight: 900;
+            text-transform: lowercase;
+        } 
+
+        input[type=text]:focus + label {
+            color: #000 !important;
+        }
+
+        input[type=text]:focus {
+            border-bottom: 1px solid rgb(248, 166, 43) !important;
+            box-shadow: 0 1px 0 0 rgb(248, 166, 43) !important;
+        }
+
+        #back {
+            font-size: 2.8vmin;
+            font-weight: 900;
+        }
+
+        #shotsurl {
+            color: rgb(248, 166, 43);
+        }
+
+
+        /* MOBILE */
+    
+        #logo-mob {
+            height: 50px;
+            width: auto;
+        }
+
+        .mainpage-text-mob {
+            height: auto !important;
+        }
+
+        .nav-elements-mob a {
+            color: rgb(58, 58, 58);
+            font-size: 5vmin;
+            font-weight: 900;
+        }
+
+        .app-navigation-mob {
+            color: #000;
+            margin: 10vmin 0;
+            font-weight: 400;
+            font-size: 1em;
+            height: auto !important;
+        }
+
+        #product-description-mob {
+            font-size: 4vmin;
+            font-weight: 400;
+            padding: 0px 0px;
+        }
+
+        .form-elements-mob {
+          height: auto !important;
+          font-size: 6vmin;
+          font-weight: 900;
+        }
+
+        .label-mob {
+            font-weight: 500;
+            color: #000;
+            font-size: 4vmin ;
+        }
+
+        .btn-mob {
+            background-color: rgb(255, 207, 118) !important;
+            font-size: 6vmin;
+            font-weight: 900;
+            color: #000;
+            text-transform: lowercase;
+        }
+
+        .mainpage-mob {
+            height: 110% !important;
+            background-image: linear-gradient(170deg, #fff 70%, rgb(255, 211, 117) 70%, rgb(248, 166, 43) 100%);
+        }
+
+        #back-mob {
+            font-size: 5vmin;
+            font-weight: 900;
+            padding: 0px 0px;
+        }
+
+        #result-number-mob {
+            font-size: 12vmin;
+            font-weight: 900;
+            padding: 0px 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="mainpage center-align hide-on-med-and-down">
+
+        <div class="row mainpage-text">
+            
+            <div class="col l1 logo-navigation"><img src="/static/images/beertap_logo_font_brown.png" id="logo"></div>
+            <div class="col l4 valign-wrapper form-container left-align">
+                
+                    
+                    <table>
+                            <tr>
+                                <td colspan="2" id="result-description">We did some number crunching and here are the number of shots you can take. This calculator gives an approximate value and does not replace professional medical advice. Drink safe!</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="result-number">{{ shotsnum }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="back">Back to <a href="{{ url_for('shots') }}" id="shotsurl">shots-maxima</a>.</td>
+                            </tr>
+                        </table>
+                    
+            </div>
+            <div class="col l6 app-navigation right-align">
+                <span class="nav-elements"><a href="{{ url_for('index') }}">home</a></span>
+                <span class="nav-elements"><a href="{{ url_for('shots') }}">shots-maxima</a></span>
+                <span class="nav-elements"><a href="{{ url_for('sober') }}">sober-up</a></span>
+                <!-- <span class="nav-elements"><a href="infographs.html">infographs</a></span> -->
+            </div> 
+
+            <div class="col l1 vertical-title valign-wrapper">
+              shotsmaxima
+              
+                    
+            </div>
+            
+        </div>
+
+    
+        
+    </div>
+
+    <div class="mainpage-mob show-on-med-and-down hide-on-large-only">
+
+            <div class="row mainpage-text-mob">
+        
+                <div class="col s1 m1"></div>
+                <div class="col m10 s10 app-navigation-mob">
+                    <img src="/static/images/beertap_logo_font_brown.png" id="logo-mob">
+                    <br><br>
+                    <span class="nav-elements-mob"><a href="{{ url_for('index') }}">home</a></span>
+                    <br>
+                    <span class="nav-elements-mob"><a href="{{ url_for('shots') }}">shots-maxima</a></span>
+                    <br>
+                    <span class="nav-elements-mob"><a href="{{ url_for('sober') }}">sober-up</a></span>
+                    <!-- <span class="nav-elements"><a href="infographs.html">infographs</a></span> -->
+                    <br><br>
+                    <hr color="#ff7b00">
+                </div> 
+                <div class="col s1 m1"></div>
+    
+            </div>
+
+            <div class="row mainpage-text-mob">
+                
+                <div class="col s1 m1"></div>
+                <div class="col s10 m10 valign-wrapper form-container left-align">
+                    
+                        <table>
+                            <tr>
+                                <td colspan="2" id="product-description-mob">We did some number crunching and here are the number of shots you can take. This calculator gives an approximate value and does not replace professional medical advice. Drink safe!</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="result-number-mob">{{ shotsnum }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" id="back-mob">Back to <a href="{{ url_for('shots') }}" id="shotsurl">shots-maxima</a>.</td>
+                            </tr>
+                        </table>
+                        
+                </div>
+                <div class="col s1 m1"></div>
+                
+            </div>
+    
+        
+            
+        </div>
+
+</body>
+</html>

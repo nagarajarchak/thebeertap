@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>roadCNN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='css/main.css') }} " />
+
+    <style>
+        
+        *, html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        ::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        body {
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .mainpage {
+            height: 100% !important;
+            background-image: linear-gradient(170deg, #fff 70%, rgb(255, 211, 117) 70%, rgb(248, 166, 43) 100%);
+        }
+
+
+        .introduction-text {
+            height: 100%;
+            text-align: left;
+            font-weight: 900;
+            font-size: 6.5vh;
+            line-height: 0.95em;
+            mix-blend-mode: difference;
+            color: rgb(124, 124, 124);
+        }
+
+        .app-title {
+            font-weight: 900;
+            font-size: 2.5em;
+            color: #000;
+            text-align: left;
+            height: auto !important;
+        }
+
+        .app-navigation {
+            color: #000;
+            margin: 4% 0;
+            font-weight: 400;
+            font-size: 1em;
+            height: auto !important;
+        }
+
+        .app-description {
+            color: #000;
+            text-align: left;
+            font-weight: 100;
+            font-size: 1.05em;
+            
+        }
+
+        .row {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-elements a {
+            color: #000;
+            padding: 8px 20px;
+        }
+
+        .nav-elements a:hover {
+            color: rgb(255, 123, 0);
+            padding: 8px 20px;
+        }
+
+
+        #logo {
+            height: 50px;
+            width: auto;
+            padding-left: 80px;
+        }
+
+        .logo-navigation {
+            color: #000;
+            margin: 3% 0;
+            font-weight: 400;
+            font-size: 1em;
+            padding-left: 4vmin !important;
+            height: auto !important;
+        }
+
+        .vertical-title  {
+          font-weight: 900;
+          font-size: 6vmin;
+          mix-blend-mode: difference;
+          color: rgb(124, 124, 124);
+          transform: rotate(90deg);
+          height: 100% !important;
+          padding-top: 26vmin !important;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="mainpage center-align">
+
+        <div class="row mainpage-text">
+            
+            <div class="col l1 logo-navigation"><img src="/static/images/beertap_logo_font_brown.png" id="logo"></div>
+            <div class="col l4 valign-wrapper">
+               
+              
+                    
+            </div>
+            <div class="col l6 app-navigation right-align">
+              
+              <span class="nav-elements"><a href="index.html">home</a></span>
+              <span class="nav-elements"><a href="shots.html">shots-maxima</a></span>
+              <span class="nav-elements"><a href="sober.html">sober-up</a></span>
+              <span class="nav-elements"><a href="infographs.html">infographs</a></span>
+
+              
+              
+            </div> 
+
+            <div class="col l1 vertical-title valign-wrapper">
+              infographs
+              
+                    
+            </div>
+            
+        </div>
+
+    
+        
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            $(".region").change(function(e) {
+            e.preventDefault();
+            $('#map').replaceWith('<div class="image-uploaded-div valign-wrapper">Image Uploaded Successfully.<br>Hit Predict!</div>');
+            });
+
+        });
+    </script>
+</body>
+</html>
